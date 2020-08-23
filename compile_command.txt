@@ -1,0 +1,8 @@
+##compile project on linux os
+sudo apt-get install -y mkisofs
+make
+qemu-system-i386 -cdrom simple_os.iso
+
+#in simple_os
+#init file system
+mount atapi 2 cdromfs
